@@ -1,0 +1,6 @@
+ipython
+numpydoc
+sphinx
+sphinx-autosummary-accessors
+sphinx-copybutton
+sphinx_rtd_theme
