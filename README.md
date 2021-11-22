@@ -47,7 +47,7 @@ I've created a skeleton layout for a Next.js site under the same `/docs` directo
 ```
 / <- index.md (narrative docs written in mdx)
 /api <- api.js  (content from _build/json/api.fjson)
-/generated/[eid].js <- /generated/eid (content from _build/json/generated/{eid}.fjson)
+/generated/[eid].js <- /generated/{eid} (content from _build/json/generated/{eid}.fjson)
 ```
 
 ## Cleaning up
