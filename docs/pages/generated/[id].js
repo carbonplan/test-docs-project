@@ -1,11 +1,11 @@
 import { promises as fs } from 'fs'
 import { Box, Themed } from 'theme-ui'
+import MDXify from '../../components/MDXify'
 
-const Generated = ({ title, body }) => {
+const Generated = ({ body }) => {
   return (
     <Box>
-      <Themed.h1>{title}</Themed.h1>
-      <div dangerouslySetInnerHTML={{ __html: body }} />
+      <MDXify html={body} />
     </Box>
   )
 }
@@ -19,7 +19,6 @@ export async function getStaticPaths() {
       params: { id: d.replace('.fjson', '') },
     }
   })
-
   return { paths: paths, fallback: false }
 }
 
@@ -27,6 +26,5 @@ export async function getStaticProps({ params }) {
   const { id } = params
   const res = await fs.readFile(`./_build/json/generated/${id}.fjson`, 'utf8')
   const contents = JSON.parse(res)
-
   return { props: contents }
 }
