@@ -2,17 +2,21 @@ import React from 'react'
 import path from 'path'
 import { promises as fs } from 'fs'
 import { Box, Themed } from 'theme-ui'
-import MDXify from '../components/MDXify'
+import Themify from '../components/themify'
+import Section from '../components/section'
 
-const APIReference = ({ body }) => {
+const Summary = ({ body }) => {
   return (
     <Box>
-      <MDXify html={body} />
+    	<Section name='summary'>
+    		<Themed.h1>Summary</Themed.h1>
+      	<Themify html={body} />
+      </Section>
     </Box>
   )
 }
 
-export default APIReference
+export default Summary
 
 export async function getStaticProps({ params }) {
   const res = await fs.readFile('./_build/json/api.fjson', 'utf8')

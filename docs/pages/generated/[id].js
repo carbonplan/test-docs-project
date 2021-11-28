@@ -1,11 +1,15 @@
 import { promises as fs } from 'fs'
 import { Box, Themed } from 'theme-ui'
-import MDXify from '../../components/MDXify'
+import Themify from '../../components/themify'
+import Section from '../../components/section'
 
-const Generated = ({ body }) => {
+const Generated = ({ body, title }) => {
   return (
     <Box>
-      <MDXify html={body} />
+      <Section name={title.split('.')[1].toLowerCase()}>
+        <Themed.h1>{title.split('.')[1]}</Themed.h1>
+        <Themify html={body} />
+      </Section>
     </Box>
   )
 }
