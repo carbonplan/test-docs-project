@@ -92,7 +92,11 @@ const Sidenav = ({ active, expanded }) => {
               </Box>
               <Box sx={{ my: [2] }}>
                 {contents[d].map((e) => {
-                  const href = '/' + (e['href'] ? e['href'] : e.replaceAll(' ', '-').toLowerCase())
+                  const href =
+                    '/' +
+                    (e['href']
+                      ? e['href']
+                      : e.replaceAll(' ', '-').toLowerCase())
                   const label = e['label'] ? e['label'] : e
                   return (
                     <Link
@@ -103,7 +107,9 @@ const Sidenav = ({ active, expanded }) => {
                         display: 'block',
                         textDecoration: 'none',
                         color:
-                          label.toLowerCase() === active ? 'primary' : 'secondary',
+                          label.toLowerCase() === active
+                            ? 'primary'
+                            : 'secondary',
                         '&:hover': {
                           color: 'primary',
                         },

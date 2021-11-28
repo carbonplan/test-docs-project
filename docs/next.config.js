@@ -17,7 +17,7 @@ module.exports = withMDX({
     return [
       {
         source: '/api',
-        destination: '/api-reference',
+        destination: '/summary',
       },
     ]
   },

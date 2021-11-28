@@ -8,9 +8,9 @@ import Section from '../components/section'
 const Summary = ({ body }) => {
   return (
     <Box>
-    	<Section name='summary'>
-    		<Themed.h1>Summary</Themed.h1>
-      	<Themify html={body} />
+      <Section name='summary'>
+        <Themed.h1>Summary</Themed.h1>
+        <Themify html={body} />
       </Section>
     </Box>
   )
