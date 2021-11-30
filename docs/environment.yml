@@ -11,5 +11,5 @@ dependencies:
   - sphinx
   - sphinx-copybutton
   - numpydoc
-  - pip:
-      - -e ../..
+  # - pip:
+  #     - -e ../..
