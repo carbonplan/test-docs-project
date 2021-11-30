@@ -9,7 +9,7 @@ dependencies:
   - ipython
   - setuptools
   - sphinx
-  - sphinx_copybutton
+  - sphinx-copybutton
   - numpydoc
   - pip:
       - -e ../..
