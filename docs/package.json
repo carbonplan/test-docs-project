@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": " NODE_ENV=development next",
-    "build": "next build",
     "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:miniconda": "curl -L -O https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh && bash Mambaforge-Linux-x86_64.sh -b -p $HOME/miniconda && mamba env create -f environment.yml && source activate docs",
+    "build:pkg": "pip install ..",
+    "build:sphinx": "make json",
+    "build:noconda": "npm run build:pkg && npm run build:sphinx && next build",
+    "build": "export PATH=$HOME/miniconda/bin:$PATH && npm run build:miniconda && npm run build:pkg && npm run build:sphinx && next build"
   },
   "author": "",
   "license": "MIT",
