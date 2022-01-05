@@ -94,9 +94,7 @@ const Sidenav = ({ active, expanded }) => {
                 {contents[d].map((e) => {
                   const href =
                     '/' +
-                    (e['href']
-                      ? e['href']
-                      : e.replaceAll(' ', '-').toLowerCase())
+                    (e['href'] ? e['href'] : e.replace(/ /g, '-').toLowerCase())
                   const label = e['label'] ? e['label'] : e
                   return (
                     <Link
