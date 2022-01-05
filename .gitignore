@@ -131,3 +131,5 @@ dmypy.json
 
 .next
 node_modules
+docs/bin
+.DS_Store
