@@ -1,0 +1,24 @@
+﻿hello\_project.HelloWorldClass
+==============================
+
+.. currentmodule:: hello_project
+
+.. autoclass:: HelloWorldClass
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~HelloWorldClass.__init__
+      ~HelloWorldClass.greeting
+      ~HelloWorldClass.print
+   
+   
+
+   
+   
+   
