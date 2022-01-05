@@ -1,6 +1,0 @@
-﻿hello\_project.hello\_world
-===========================
-
-.. currentmodule:: hello_project
-
-.. autofunction:: hello_world
