@@ -11,7 +11,7 @@
     "build:pkg": "pip install ..",
     "build:sphinx": "make json",
     "build:noconda": "npm run build:pkg && npm run build:sphinx && next build",
-    "build": "export PATH=$HOME/miniconda/bin:$PATH && npm run build:miniconda && npm run build:pkg && npm run build:sphinx && next build"
+    "build": "export PATH=$HOME/miniconda/envs/docs:$HOME/miniconda/bin:$PATH && npm run build:miniconda && npm run build:pkg && npm run build:sphinx && next build"
   },
   "author": "",
   "license": "MIT",
