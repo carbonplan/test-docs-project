@@ -16,6 +16,3 @@ pip install ..
 # build json content
 make json
 ls _build/json/*
-
-# build docs
-next build
